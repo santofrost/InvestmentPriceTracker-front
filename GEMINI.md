@@ -1,0 +1,1 @@
+See ./github/AI_RULES.md for project instructions.
