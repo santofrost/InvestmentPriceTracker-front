@@ -3,5 +3,7 @@
     {
       "file": ".github/prompts/git-commits.prompt.md"
     }
-  ]
+  ],
+  "scm.provider.git.aiCommitMessage.promptFile": ".github/prompts/git-commits.prompt.md",
+  "ai.commitMessage.promptRules": ".github/prompts/git-commits.prompt.md"
 }

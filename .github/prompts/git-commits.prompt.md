@@ -7,12 +7,16 @@ Debes seguir estrictamente la convención de **Conventional Commits**.
 1.  **Formato OBLIGATORIO del mensaje:**
     `<type>(<scope>): <description in imperative mood>`
 
+    *   ❌ INCORRECTO: `feat: add login` (Falta el scope entre paréntesis)
+    *   ✅ CORRECTO: `feat(auth): add login`
+
     [optional body detailing the why of the change]
 
-2.  **Scope (Ámbito) OBLIGATORIO:**
-    *   **Siempre** debes incluir un scope entre paréntesis justo después del tipo.
-    *   El scope describe qué parte del código se vio afectada (ej. `ui`, `auth`, `api`, `config`, `components`, `hooks`).
-    *   No puedes omitir los paréntesis ni el texto que va dentro.
+2.  **Scope (Ámbito) ESTRICTAMENTE OBLIGATORIO:**
+    *   **ESTÁ TOTALMENTE PROHIBIDO** omitir el scope.
+    *   **Siempre** debes incluir un scope descriptivo entre paréntesis justo después del tipo.
+    *   El scope describe qué parte del código se vio afectada (ej. `ui`, `auth`, `api`, `config`, `components`, `hooks`, `vscode`).
+    *   Si no sabes qué poner, usa el nombre del archivo principal modificado en minúsculas.
 
 3.  **Tipos EXCLUSIVAMENTE permitidos (¡Prohibido usar `chore` u otros!):**
     *   `feat`: Nueva funcionalidad (agrega algo nuevo al proyecto).
