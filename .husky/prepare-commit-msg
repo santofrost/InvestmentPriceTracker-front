@@ -1,0 +1,26 @@
+#!/bin/sh
+
+COMMIT_MSG_FILE=$1
+
+# Obtener la rama actual (ej: feature/42-add-login-form)
+BRANCH_NAME=$(git symbolic-ref --short HEAD 2>/dev/null)
+
+# Si no estamos en ninguna rama, salir
+if [ -z "$BRANCH_NAME" ]; then
+  exit 0
+fi
+
+# Extraer el primer número que aparezca en el nombre de la rama
+ISSUE_NUMBER=$(echo "$BRANCH_NAME" | grep -o -E '[0-9]+' | head -n 1)
+
+# Si se encontró un ID de Issue
+if [ -n "$ISSUE_NUMBER" ]; then
+  # Leer la primera línea del mensaje de commit que nos propuso el IDE/IA
+  FIRST_LINE=$(head -n 1 "$COMMIT_MSG_FILE")
+  
+  # Añadir el tag si no existe ya
+  if ! echo "$FIRST_LINE" | grep -q "#$ISSUE_NUMBER"; then
+    # Inyectar "#ID" justo después de los dos puntos de Conventional Commits
+    sed -i.bak -E "1s/^([^:]+):/\1: #${ISSUE_NUMBER}/" "$COMMIT_MSG_FILE"
+  fi
+fi

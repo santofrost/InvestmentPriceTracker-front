@@ -164,3 +164,12 @@ When answering:
 4. Prefer maintainability over clever code.
 
 If a solution breaks these rules, explain why.
+
+---
+
+## AI Specific Prompts & Workflows
+
+Como asistente de IA (Antigravity), **debes** seguir las instrucciones detalladas en los archivos de la carpeta `.github/prompts/` según sea necesario:
+
+* **Para UI y Estilos:** Sigue estrictamente `.github/prompts/tailwindcss.prompt.md`.
+* **Para Generar Commits (Botón Generate):** Antes de proponer un mensaje de commit, **debes leer y aplicar estrictamente** las reglas definidas en `.github/prompts/git-commits.prompt.md`. Nunca autoejecutes el commit final en consola.

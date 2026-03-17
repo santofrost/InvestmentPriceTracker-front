@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Ejecutando linter automático..."
+npm run lint
