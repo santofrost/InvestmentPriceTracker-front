@@ -1,9 +1,8 @@
-# GEMINI.md
-
 ## Project Context
 
 This is a frontend application.
 The AI assistant must follow the architecture and coding conventions defined in this file when suggesting code or solutions.
+The AI assistant must to talk in the same language the user is talking to.
 
 ---
 
@@ -169,7 +168,7 @@ If a solution breaks these rules, explain why.
 
 ## AI Specific Prompts & Workflows
 
-Como asistente de IA (Antigravity), **debes** seguir las instrucciones detalladas en los archivos de la carpeta `.github/prompts/` según sea necesario:
+As an AI assistant (Antigravity), you **must** follow the detailed instructions in the `docs/rules/` folder files as needed:
 
-* **Para UI y Estilos:** Sigue estrictamente `.github/prompts/tailwindcss.prompt.md`.
-* **Para Generar Commits (Botón Generate):** Antes de proponer un mensaje de commit, **debes leer y aplicar estrictamente** las reglas definidas en `.github/prompts/git-commits.prompt.md`. Nunca autoejecutes el commit final en consola.
+* **For UI and Styling:** Strictly follow `docs/rules/ui.md`.
+* **For Generating Commits (Generate Button):** Before proposing a commit message, you **must read and strictly apply** the rules defined in `docs/rules/commits.md`. Never auto-execute the final commit in the console.
